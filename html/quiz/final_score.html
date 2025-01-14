@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Score</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .score-container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .btn {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="score-container">
+        <h1>Final Score</h1>
+        <p id="score">Your total score: 0/50</p>
+        <p id="correct">Correct Answers: 0</p>
+        <p id="incorrect">Incorrect Answers: 0</p>
+        <p id="unattempted">Unattempted Questions: 0</p>
+        <button class="btn" onclick="restartQuiz()">Restart Quiz</button>
+    </div>
+
+    <script>
+        function calculateScore() {
+            let score = 0;
+            let correctCount = 0;
+            let incorrectCount = 0;
+            let unattemptedCount = 0;
+            let totalQuestions = 5;
+            let correctAnswers = ['b', 'd', 'a', 'c', 'a'];  // Array of correct answers for each question
+
+            for (let i = 1; i <= totalQuestions; i++) {
+                let answer = localStorage.getItem(`question${i}`);
+                
+                if (answer === correctAnswers[i - 1]) {
+                    score += 20;  // Correct answer
+                    correctCount++;
+                } else if (answer === null) {
+                    score += 0;  // Unattempted question
+                    unattemptedCount++;
+                } else {
+                    score -= 5;  // Incorrect answer
+                    incorrectCount++;
+                }
+            }
+
+            return { score, correctCount, incorrectCount, unattemptedCount };
+        }
+
+        window.onload = function() {
+            const { score, correctCount, incorrectCount, unattemptedCount } = calculateScore();
+            document.getElementById('score').textContent = `Your total score: ${score}/100`;
+            document.getElementById('correct').textContent = `Correct Answers: ${correctCount}`;
+            document.getElementById('incorrect').textContent = `Incorrect Answers: ${incorrectCount}`;
+            document.getElementById('unattempted').textContent = `Unattempted Questions: ${unattemptedCount}`;
+        };
+
+        function restartQuiz() {
+            localStorage.clear();
+            window.location.href = 'question1.html';  // Redirect to the first question page
+        }
+    </script>
+
+</body>
+</html>

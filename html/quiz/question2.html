@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .question-container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .options {
+            list-style-type: none;
+            padding: 0;
+        }
+        .options li {
+            margin: 10px 0;
+        }
+        .btn-container {
+            display: flex;
+            justify-content: space-between;
+        }
+        .btn {
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="question-container">
+        <p><strong>Question 2:</strong> A train 100 meters long is running at a speed of 60 km/h. How long will it take to cross a bridge 200 meters long?</p>
+
+        <form id="questionForm">
+            <ul class="options">
+                <li><input type="radio" name="answer" value="a"> a) 12 seconds</li>
+                <li><input type="radio" name="answer" value="b"> b) 40 seconds</li>
+                <li><input type="radio" name="answer" value="c"> c) 25 seconds</li>
+                <li><input type="radio" name="answer" value="d"> d) 18 seconds</li>
+            </ul>
+        </form>
+
+        <div class="btn-container">
+            <button type="button" class="btn" onclick="previousQuestion()">Previous</button>
+            <button type="button" class="btn" onclick="nextQuestion()">Next</button>
+            <button type="button" class="btn" onclick="saveAndNext()">Save and Next</button>
+        </div>
+    </div>
+
+    <script>
+        window.onload = function() {
+            const savedAnswer = localStorage.getItem('question2');
+            if (savedAnswer) {
+                document.querySelector(`input[name="answer"][value="${savedAnswer}"]`).checked = true;
+            }
+        };
+
+        function saveAnswer() {
+            const selectedOption = document.querySelector(`input[name="answer"]:checked`);
+            if (selectedOption) {
+                localStorage.setItem('question2', selectedOption.value);
+            }
+        }
+
+        function previousQuestion() {
+            window.location.href = 'question1.html';
+        }
+
+        function nextQuestion() {
+            window.location.href = 'question3.html';
+        }
+
+        function saveAndNext() {
+            const selectedOption = document.querySelector(`input[name="answer"]:checked`);
+            if (!selectedOption) {
+                alert("Please select an option before proceeding.");
+                return;
+            }
+            saveAnswer();
+            setTimeout(function() {
+                window.location.href = 'question3.html';
+            }, 300);
+        }
+    </script>
+
+</body>
+</html>
