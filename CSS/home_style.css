@@ -62,12 +62,16 @@ main {
   transform: translateX(-50%);
   text-align: center;
   color: black;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 #team-name h1 {
   font-size: 4em; /* Increase or decrease font size as needed */
   margin: 0;
+}
+#team-name h1:hover{
+  color: rgb(118, 11, 11);
+  text-decoration: underline;
+  transition: color 0.3s ease;
 }
 
 
