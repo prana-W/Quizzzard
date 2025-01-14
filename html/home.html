@@ -3,121 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/home_style.css">
     <title>Quizzzard</title>
-    
-    <style>
-       body{
-        background-image: url("https://images.pexels.com/photos/1323550/pexels-photo-1323550.jpeg?auto=compress&cs=tinysrgb&w=400");
-        background-repeat: no-repeat;
-        background-size: cover;
-       }
-    
-      #team-name{
-        text-align: center;
-        color:rgb(131, 29, 29);
-      }
-        #name{
-          color:rgb(19, 120, 19);
-          text-align: center;
-        }
-       #name-input-section{
-        text-align: center;
-       }
-      img {
-        float: left;
-      }
-     
-      nav {
-        width: 100%;
-        padding: 10px 20px;
-        position: fixed;
-        top: 0;
-        right: 0;
-        z-index: 1000;
-      }
-
-      nav ul {
-        list-style: none;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-      }
-
-      nav ul li a {
-        margin-left: 20px;
-        color: black;
-        font-size: 1.2em;
-        cursor: pointer;
-        transition: color 0.3s ease;
-      }
-
-      nav ul li a:hover {
-        color: #ffdd57;
-      }
-
-
-      @media (max-width: 768px) {
-        nav ul a {
-          flex-direction: column;
-          align-items: flex-end;
-        }
-
-        nav ul li a {
-          margin: 10px 0;
-        }
-      }
-
-
-      footer {
-        background-color:#CE8F90;
-        color: black;
-        text-align: center;
-        padding: 15px 0;
-        margin-top: 20px;
-
-        font-size: 1em;
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-      }
-
-      footer p {
-        margin: 0;
-        font-size: 0.9em;
-      }
-
-      footer p:hover {
-        color: #007bff;
-        transition: color 0.3s ease;
-      }
- 
-      html,
-      body {
-        height: 100%;
-      }
-
-      body {
-        display: flex;
-        flex-direction: column;
-      }
-
-      main {
-        flex-grow: 1;
-      }
-
-
-      @media (max-width: 768px) {
-        footer {
-          padding: 15px 0;
-          font-size: 0.9em;
-        }
-
-        footer p {
-          font-size: 0.8em;
-        }
-      }
-
-    </style>
 </head>
 <body>
     <header>
@@ -142,9 +29,9 @@
     
 
         <section id="name-input-section">
-            <h2>Enter Your Name</h2>
+            <h2>Welcome</h2>
             <form id="name-form">
-              <label for="name">Name:</label>
+              <label for="name"></label>
               <input type="text" id="name" name="name" placeholder="Enter your name" required>
               <button type="submit">Start Quiz</button>
             </form>
@@ -153,9 +40,7 @@
 
     </main>
 
-    <footer>
-        &copy; 2025 All rights reserved.
-    </footer>
+   
 
     <script src="/JS/home_script.js"></script>
     
