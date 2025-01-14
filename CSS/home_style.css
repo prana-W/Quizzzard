@@ -1,4 +1,4 @@
-/* General Body Styling */
+
 body {
   background-image: url("/img/bg_main.jpg"); /* Update this path as needed */
   background-size: cover;
@@ -13,9 +13,9 @@ body {
   min-height: 100vh;
 }
 
-/* Header and Navigation Styling */
+
 header {
-  background-color: rgba(0, 0, 0, 0.7); /* Transparent black background */
+  background-color: rgba(0, 0, 0, 0.7); 
   position: fixed;
   width: 100%;
   z-index: 1000;
@@ -42,10 +42,10 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #ffdd57; /* Highlight color */
+  color: #ffdd57; 
 }
 
-/* Main Content Styling */
+
 main {
   display: flex;
   justify-content: center;
@@ -57,7 +57,7 @@ main {
 
 #team-name {
   position: absolute;
-  top: 10%; /* Adjust this value to position it further up or down */
+  top: 10%;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
@@ -65,7 +65,7 @@ main {
 }
 
 #team-name h1 {
-  font-size: 4em; /* Increase or decrease font size as needed */
+  font-size: 4em; 
   margin: 0;
 }
 #team-name h1:hover{
@@ -76,7 +76,7 @@ main {
 
 
 #name-input-section {
-  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+  background-color: rgba(255, 255, 255, 0.9); 
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -115,7 +115,7 @@ main {
   background-color: #0056b3;
 }
 
-/* Footer Styling */
+
 footer {
   background-color: #222;
   color: white;
@@ -136,7 +136,6 @@ footer p:hover {
   transition: color 0.3s ease;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   nav ul {
     flex-direction: column;
