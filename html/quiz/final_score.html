@@ -52,19 +52,19 @@
             let incorrectCount = 0;
             let unattemptedCount = 0;
             let totalQuestions = 5;
-            let correctAnswers = ['b', 'd', 'a', 'c', 'a'];  // Array of correct answers for each question
+            let correctAnswers = ['b', 'd', 'a', 'c', 'a']; 
 
             for (let i = 1; i <= totalQuestions; i++) {
                 let answer = localStorage.getItem(`question${i}`);
                 
                 if (answer === correctAnswers[i - 1]) {
-                    score += 20;  // Correct answer
+                    score += 20; 
                     correctCount++;
                 } else if (answer === null) {
-                    score += 0;  // Unattempted question
+                    score += 0;  
                     unattemptedCount++;
                 } else {
-                    score -= 5;  // Incorrect answer
+                    score -= 5;  
                     incorrectCount++;
                 }
             }
@@ -82,7 +82,7 @@
 
         function restartQuiz() {
             localStorage.clear();
-            window.location.href = '/html/instruction.html';  // Redirect to the first question page
+            window.location.href = '/html/instruction.html';  
         }
     </script>
 

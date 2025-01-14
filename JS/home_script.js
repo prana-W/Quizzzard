@@ -14,7 +14,7 @@ form.addEventListener("submit", function (event) {
     var userConfirmed = confirm(`Name saved successfully: ${userName}
 Do you want to proceed?`);
     if (userConfirmed) {
-        window.open('instruction.html', '_blank');
+        window.open('/html/instruction.html', '_blank');
     }
 }
 

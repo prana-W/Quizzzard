@@ -1,0 +1,30 @@
+
+#pfp, #pfp2{
+    height:200px;
+    width:200px;
+    border-radius:20px;
+    margin-right:70px;
+}
+#info{
+    height:200px;
+    width:600px;
+    background-color:black ;
+    border-style:solid;
+    border-radius:20px;  
+}
+#whole_block{
+    display:flex;
+    flex-direction: row;
+}
+#name{
+    color:white;
+    padding-left: 40px;
+}
+#field{
+    color:grey;
+    padding-left: 40px;
+}
+#about{
+    color:white;
+    padding-left: 40px;
+}

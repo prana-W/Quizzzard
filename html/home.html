@@ -4,16 +4,125 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quizzzard</title>
-    <link rel="stylesheet" href="/CSS/home_style.css">
     
+    <style>
+      #team-name{
+        text-align: center;
+        color:rgb(131, 29, 29);
+      }
+        #name{
+          color:rgb(19, 120, 19);
+          text-align: center;
+        }
+       #name-input-section{
+        text-align: center;
+       }
+      img {
+        float: left;
+      }
+     
+      
+
+     
+      nav {
+        width: 100%;
+        padding: 10px 20px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 1000;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+
+      nav ul li a {
+        margin-left: 20px;
+        color: black;
+        font-size: 1.2em;
+        cursor: pointer;
+        transition: color 0.3s ease;
+      }
+
+      nav ul li a:hover {
+        color: #ffdd57;
+      }
+
+
+      @media (max-width: 768px) {
+        nav ul a {
+          flex-direction: column;
+          align-items: flex-end;
+        }
+
+        nav ul li a {
+          margin: 10px 0;
+        }
+      }
+
+
+      footer {
+        background-color: bisque;
+        color: black;
+        text-align: center;
+        padding: 15px 0;
+        margin-top: 20px;
+
+        font-size: 1em;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+      }
+
+      footer p {
+        margin: 0;
+        font-size: 0.9em;
+      }
+
+      footer p:hover {
+        color: #007bff;
+        transition: color 0.3s ease;
+      }
+ */
+      html,
+      body {
+        height: 100%;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+      }
+
+      main {
+        flex-grow: 1;
+      }
+
+
+      @media (max-width: 768px) {
+        footer {
+          padding: 15px 0;
+          font-size: 0.9em;
+        }
+
+        footer p {
+          font-size: 0.8em;
+        }
+      }
+
+    </style>
 </head>
 <body>
     <header>
     <nav>
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="html/about.html">About Us</a></li>
-            <li><a href="html/contact.html">Contact Us</a></li>
+            <li><a href="">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
 
         </ul>
     </nav>
@@ -22,6 +131,12 @@
 
 
     <main>
+      
+        
+      <div id="team-name">
+        <h1> Quizzzard<h1>
+      </div>
+    
 
         <section id="name-input-section">
             <h2>Enter Your Name</h2>
@@ -31,7 +146,7 @@
               <button type="submit">Start Quiz</button>
             </form>
           </section>
-          
+        
 
     </main>
 
@@ -40,8 +155,7 @@
     </footer>
 
     <script src="/JS/home_script.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+    
 
 </body>
 </html>
