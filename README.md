@@ -1,2 +1,2 @@
 # Quizzzard
-This repo contains the code for quizzing webapp (QUIZZZARD) for PCON webthon-2025
+This repo contains the code for quizzing webapp (QUIZZZARD) for PCON devthon-2025
