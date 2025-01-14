@@ -1,7 +1,7 @@
 const form = document.getElementById("name-form");
 
 form.addEventListener("submit", function (event) {
-  event.preventDefault();
+ event.preventDefault();
 
   const nameInput = document.getElementById("name");
   const userName = nameInput.value.trim();
